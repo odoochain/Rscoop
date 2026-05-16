@@ -23,7 +23,7 @@ where
         args
     );
     execra::Command::new("powershell")
-        .args(["-NoLogo", "-NoProfile", "-Command", &inner])
+        .args(["-ExecutionPolicy", "Bypass", "-NoLogo", "-NoProfile", "-Command", &inner])
         .tags(["scoop".to_string()])
 }
 
